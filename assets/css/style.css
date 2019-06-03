@@ -1,0 +1,17 @@
+
+.crystal {
+    border-color: orange;
+    border:3px;
+    border-style: solid;
+    height: 200px;
+    width: 200px;
+}
+
+.crystals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-color: deeppink;
+    border-style: solid;
+    border: 3px;
+}
