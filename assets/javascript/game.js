@@ -19,7 +19,16 @@ var gameWin;
 // for loop to add 4 divs to the HTML
 
 for (var i = 0; i < 4; i++) {
+
+    var randomNumber = Math.floor(Math.random() * 12);
+    console.log(randomNumber);
+    // generates four random number values upon page load.
     var crystal = $("<div>");
-    crystal.attr("class", 'crystal');
+        crystal.attr({
+            "class": 'crystal',
+            "dataRandom": randomNumber
+            // assigns a random number value to each div
+        });
+
     $(".crystals").append(crystal);
 }

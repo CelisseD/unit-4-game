@@ -1,6 +1,6 @@
 
 .crystal {
-    border-color: orange;
+    border-color: orange !important;
     border:3px;
     border-style: solid;
     height: 200px;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-color: deeppink;
+    border-color: deeppink !important;
     border-style: solid;
     border: 3px;
 }
