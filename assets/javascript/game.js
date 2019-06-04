@@ -20,7 +20,7 @@ var previousNumber = 0;
 
 // Assigns a target number that the user should reach
 targetNumber = Math.floor(Math.random() * 102) + 19;
-console.log(targetNumber);
+
 
 // Adds the target number to the HTML
 $("#target").html("Target Number: " + targetNumber);
@@ -29,7 +29,7 @@ $("#target").html("Target Number: " + targetNumber);
 for (var i = 0; i < 4; i++) {
 
     var randomNumber = Math.floor(Math.random() * 11) + 1;
-    console.log(randomNumber);
+    
     // generates four random number values upon page load.
     var crystal = $("<div>");
         crystal.attr({
