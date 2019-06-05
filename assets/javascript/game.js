@@ -39,6 +39,7 @@ $("#target").html("Target Number: " + targetNumber);
 // Run the following function when the game begins upon page load.
 var beginGame = function () {
     $(".crystals").empty(); 
+
     // for loop to add 4 divs to the HTML
     for (var i = 0; i < 4; i++) {
 
@@ -76,7 +77,7 @@ $(".crystal").on("click", function() {
     if (previousNumber > targetNumber) {
         gameLost--;
 
-        $("#gameLost").html("You Lose!!!");
+        $("#gameLost").html("😩😩😩 You Lose!!! 😩😩😩");
 
         beginGame();
         
@@ -85,7 +86,7 @@ $(".crystal").on("click", function() {
     else if (previousNumber === targetNumber){
         gameWin++;
 
-        $("#gameWin").html("You Win!!!");
+        $("#gameWin").html("🏆🏆🏆 You Win!!! 🏆🏆🏆");
 
         beginGame();
     }

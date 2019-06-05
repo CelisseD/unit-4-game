@@ -1,14 +1,19 @@
 
 body {
-    background-image: url("assets/images/pentagonbg.png") !important;
+    background-image:url("../images/pentagonbg.png");
 }
 
 .card-header {
-    font-family: 'Kumar One Outline', cursive;
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
 }
 
 .card-body {
-    font-family: 'Gochi Hand', cursive;
+    font-family: 'Questrial', sans-serif;
+}
+
+#userScore {
+    font-size: 24px;
 }
 
 .crystal {
