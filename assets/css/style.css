@@ -1,4 +1,16 @@
 
+body {
+    background-image: url("assets/images/pentagonbg.png") !important;
+}
+
+.card-header {
+    font-family: 'Kumar One Outline', cursive;
+}
+
+.card-body {
+    font-family: 'Gochi Hand', cursive;
+}
+
 .crystal {
     height: 200px;
     width: 200px;
@@ -11,3 +23,28 @@
     border: 3px;
 }
 
+#gameWin {
+    text-align: center;
+    font-size: 48px;
+    color: green;
+}
+
+#gameLost {
+    text-align: center;
+    font-size: 48px;
+    color: red;
+}
+
+.btn {
+    position: relative;
+    margin: 0 auto;
+    color: deeppink;
+}
+
+.container {
+padding: 15px;
+}
+
+.card-title {
+    text-align: center;
+}

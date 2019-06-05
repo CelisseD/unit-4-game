@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Kumar+One+Outline&display=swap" rel="stylesheet">
+
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -27,7 +30,7 @@
 <!-- HEADER AND INSTRUCTIONS -->
   <div class="container">
     <div class="row">
-      <div class="col-9">
+      <div class="col-8 mx-auto">
         <div class="card">
           <div class="card-header">
             Crystal Collector Game
@@ -51,12 +54,17 @@
   <!-- MAIN GAME CONTENT -->
   <div class="container">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 mx-auto">
           <div class="card">
   
             <div class="card-body">
-              <h5 class="card-title"><p id="target"></p></h5>
+              <h5 class="card-title">
+                <p id="target"></p>
+                <p id="userScore">Your Score: 0</p></h5>
               <p class="card-text"><div class="crystals"></div></p>
+
+              <p id="gameWin"></p>
+              <p id="gameLost"></p>
               
               <button type="button" class="btn btn-outline-secondary" onclick="window.location.reload(true)">Play Again</button>
             </div>

@@ -14,9 +14,12 @@ $( document ).ready(function(){
 // GLOBAL VARIABLES
 
 var targetNumber; // score the player should reach by clicking the crystals
+var userScore; // score that the player earns by clicking the crystals
 var gameLost;
 var gameWin;
 var previousNumber = 0;
+
+
 var crystalImagesArray = [
     "assets/images/crystal1.png",
     "assets/images/crystal2.png",
@@ -28,43 +31,64 @@ var crystalImagesArray = [
 // Assigns a target number that the user should reach
 targetNumber = Math.floor(Math.random() * 102) + 19;
 
+userScore = 
 
 // Adds the target number to the HTML
 $("#target").html("Target Number: " + targetNumber);
 
-// for loop to add 4 divs to the HTML
-for (var i = 0; i < 4; i++) {
+// Run the following function when the game begins upon page load.
+var beginGame = function () {
+    $(".crystals").empty(); 
+    // for loop to add 4 divs to the HTML
+    for (var i = 0; i < 4; i++) {
 
-    var randomNumber = Math.floor(Math.random() * 11) + 1;
-    
-    // generates four random number values upon page load.
-    var crystal = $("<div>");
-        crystal.attr({
-            "class": 'crystal',
-            "dataRandom": randomNumber
-            // assigns a random number value to each div
-        });
-        crystal.css({
-            // adds a crystal image from the crystalImagesArray into each div
-            "background-image":"url('" + crystalImagesArray[i] + "')",
-            "background-size":"cover"
-        });   
-            crystal.html(randomNumber);
+        var randomNumber = Math.floor(Math.random() * 11) + 1;
+        
+        // generates four random number values upon page load.
+        var crystal = $("<div>");
+            crystal.attr({
+                "class": 'crystal',
+                "dataRandom": randomNumber
+                // assigns a random number value to each div
+            });
+            crystal.css({
+                // adds a crystal image from the crystalImagesArray into each div
+                "background-image":"url('" + crystalImagesArray[i] + "')",
+                "background-size":"cover"
+            });   
 
-    $(".crystals").append(crystal);
+        $(".crystals").append(crystal);
 
 }
+}
+
+beginGame();
 
 // Allows user to click on a crystal and receive a number value which has pulled from dataRandom
 $(".crystal").on("click", function() {
     var result;
     var num = parseInt($(this).attr('dataRandom'));
     previousNumber += num;
+
+    // Adds the user's score to the HTML
+    $("#userScore").html("Your Score: " + previousNumber);
+
     if (previousNumber > targetNumber) {
-        console.log("You Lose!");
+        gameLost--;
+
+        $("#gameLost").html("You Lose!!!");
+
+        beginGame();
+        
     }
+    
     else if (previousNumber === targetNumber){
-        console.log("You Win!");
+        gameWin++;
+
+        $("#gameWin").html("You Win!!!");
+
+        beginGame();
     }
+    
     console.log(previousNumber)
 })});
