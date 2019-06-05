@@ -17,9 +17,11 @@ var targetNumber; // score the player should reach by clicking the crystals
 var gameLost;
 var gameWin;
 var previousNumber = 0;
-var crystalImages = [
-    ""
-]
+var crystalImagesArray = [
+    "assets/images/crystal1.png",
+    "assets/images/crystal2.png",
+    "assets/images/crystal3.png",
+    "assets/images/crystal4.png" ]
 
 
 
@@ -42,6 +44,11 @@ for (var i = 0; i < 4; i++) {
             "dataRandom": randomNumber
             // assigns a random number value to each div
         });
+        crystal.css({
+            // adds a crystal image from the crystalImagesArray into each div
+            "background-image":"url('" + crystalImagesArray[i] + "')",
+            "background-size":"cover"
+        });   
             crystal.html(randomNumber);
 
     $(".crystals").append(crystal);
