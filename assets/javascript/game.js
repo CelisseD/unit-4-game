@@ -9,12 +9,17 @@
 // The player loses if their score goes above the random number.
 // The game restarts whenever the player wins or loses.
 
+$( document ).ready(function(){
+
 // GLOBAL VARIABLES
 
 var targetNumber; // score the player should reach by clicking the crystals
 var gameLost;
 var gameWin;
 var previousNumber = 0;
+var crystalImages = [
+    ""
+]
 
 
 
@@ -55,4 +60,4 @@ $(".crystal").on("click", function() {
         console.log("You Win!");
     }
     console.log(previousNumber)
-});
+})});
