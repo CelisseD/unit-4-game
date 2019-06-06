@@ -15,8 +15,8 @@ $( document ).ready(function(){
 
 var targetNumber; // score the player should reach by clicking the crystals
 var userScore; // score that the player earns by clicking the crystals
-var gameLost;
-var gameWin;
+var gameLost = 0;
+var gameWin = 0;
 var previousNumber = 0;
 
 

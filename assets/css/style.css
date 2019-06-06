@@ -3,6 +3,16 @@ body {
     background-image:url("../images/pentagonbg.png");
 }
 
+h6 {
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 148px;
+}
+
+.card-img-top {
+    opacity: 0.5;
+}
+
 .card-header {
     font-family: 'Lobster', cursive;
     font-size: 32px;
@@ -47,7 +57,8 @@ body {
 }
 
 .container {
-padding: 15px;
+margin-bottom: 30px;
+margin-top: 30px;
 }
 
 .card-title {

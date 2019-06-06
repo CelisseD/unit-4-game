@@ -19,7 +19,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Link to Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Questrial|Kumar+One+Outline&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Questrial|Kumar+One+Outline&display=swap"
+    rel="stylesheet">
 
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,15 +28,15 @@
 
 <body>
 
-<!-- HEADER AND INSTRUCTIONS -->
+  <!-- HEADER AND INSTRUCTIONS -->
   <div class="container">
     <div class="row">
-      <div class="col-8 mx-auto">
+      <div class="col-md-8 mx-auto">
         <div class="card text-center">
-          <div class="card-header">
-            Crystal Collector Game
+          <img src="assets/images/crystalsheader.jpg" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h6 class="card-title">Crystal Collector</h6>
           </div>
-
           <div class="card-body">
             <h5 class="card-title">Instructions:</h5>
             <p class="card-text">You will be given a random number at the start of the game.<br><br>There are four
@@ -43,35 +44,39 @@
               score.<br><br>You win the game by matching the Target Number with your Total Score. You lose the game if
               your Total Score goes above the Target Number.<br><br>The value of each crystal is hidden until you click
               on it.<br><br></p>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
 
   <!-- MAIN GAME CONTENT -->
   <div class="container">
-      <div class="row">
-        <div class="col-12 mx-auto">
-          <div class="card text-center">
+    <div class="row">
+      <div class="col-9.5 mx-auto">
+        <div class="card text-center">
           <div class="card-header">
-              <p id="target"></p>
+            <p id="target"></p>
           </div>
-            <div class="card-body">
-              <p id="userScore">Your Score: 0</p></h5>
-              <p class="card-text"><div class="crystals"></div></p>
+          <div class="card-body">
+            <p id="userScore">Your Score: 0</p>
+            </h5>
+            <p class="card-text">
+              <div class="crystals"></div>
+            </p>
 
-              <p id="gameWin"></p>
-              <p id="gameLost"></p>
-              
-              <button type="button" class="btn btn-outline-secondary" onclick="window.location.reload(true)">Play Again</button>
-            </div>
-            </div>
+            <p id="gameWin"></p>
+            <p id="gameLost"></p>
+
+            <button type="button" class="btn btn-outline-secondary" onclick="window.location.reload(true)">Play
+              Again</button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
   <script src="assets/javascript/game.js"></script>
