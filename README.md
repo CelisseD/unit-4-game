@@ -5,7 +5,7 @@ This application was built as part of the UCF Coding Bootcamp and was authored b
 Crystal Collector challenges the user to reach the randomly generated Target Number, by clicking on the crystals. Each crystal is assigned a randomly generated value each time the game is played. Reach the target number without going over to win the game. Otherwise, start over and play again. ⭐️
 
 # Screenshot
-<img src="assets/images/crystal-game.png">
+<img src="assets/images/crystal-game.png" width="400">
 
 # Technologies Used
 <ul>
